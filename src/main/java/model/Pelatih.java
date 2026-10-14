@@ -1,8 +1,18 @@
 package model;
 
-public final class Pelatih extends AnggotaKlub{
-    private final String spesialisasi;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "pelatih")
+public class Pelatih extends AnggotaKlub{
+    @Column(name = "spesialisasi")
+    private String spesialisasi;
+    @Column(name = "pengalaman")
     private int pengalaman;
+    
+    protected Pelatih() {}
     
     public Pelatih(String nama, String spesialisasi, int pengalaman) {
         super(nama);
@@ -25,6 +35,9 @@ public final class Pelatih extends AnggotaKlub{
         }
     }
 
+    public String getSpesialisasi() { return spesialisasi; }
+    public int getPengalaman() { return pengalaman; }
+    
     @Override
     public String getInfo() {
         return super.getInfo()

@@ -1,10 +1,22 @@
 package model;
 
-public final class Pemain extends AnggotaKlub {
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "pemain")
+public class Pemain extends AnggotaKlub {
+    @Column(name = "posisi")
     private String posisi;
+    @Column(name = "nomor_punggung")
     private int nomorPunggung;
+    @Column(name = "usia")
     private int usia;
+    @Column(name = "status_kesehatan")
     private String statusKesehatan;
+    
+    protected Pemain() {}
     
     public Pemain(String nama, String posisi, int nomorPunggung, int usia, String statusKesehatan) {
         super(nama);
@@ -68,9 +80,15 @@ public final class Pemain extends AnggotaKlub {
         }
     }
     
+    public String getPosisi() { return posisi; }
+    public int getNomorPunggung() { return nomorPunggung; }
+    public int getUsia() { return usia; }
+    public String getStatusKesehatan() { return statusKesehatan; }
+    
     @Override
     public String getInfo() {
-        return super.getInfo()
+        return "ID               : "  + getId() + "\n"
+             + super.getInfo()
              + "\nPosisi           : " + posisi
              + "\nNo. Punggung     : " + nomorPunggung
              + "\nUsia             : " + usia

@@ -1,12 +1,32 @@
 package model;
 
-public final class Pertandingan implements Informasi {
-    private final String lawan;
-    private final String tanggal;
-    private final String kompetisi;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+ 
+@Entity
+@Table(name = "pertandingan")
+public class Pertandingan implements Informasi {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
+    @Column(name = "lawan")
+    private String lawan;
+    @Column(name = "tanggal")
+    private String tanggal;
+    @Column(name = "kompetisi")
+    private String kompetisi;
+    @Column(name = "skor_klub")
     private int skorKlub;
+    @Column(name = "skor_lawan")
     private int skorLawan;
+    @Column(name = "lokasi")
     private String lokasi;
+ 
+    protected Pertandingan(){}
 
     public Pertandingan(String lawan, String tanggal, String kompetisi, int skorKlub, int skorLawan, String lokasi) {
         this.lawan = lawan;
@@ -62,6 +82,14 @@ public final class Pertandingan implements Informasi {
             return "Seri";
         }
     }
+    
+    public Integer getId() { return id; }
+    public String getLawan() { return lawan; }
+    public String getTanggal() { return tanggal; }
+    public String getKompetisi() { return kompetisi; }
+    public int getSkorKlub() { return skorKlub; }
+    public int getSkorLawan() { return skorLawan; }
+    public String getLokasi() { return lokasi; }
     
     @Override
     public String getInfo() {

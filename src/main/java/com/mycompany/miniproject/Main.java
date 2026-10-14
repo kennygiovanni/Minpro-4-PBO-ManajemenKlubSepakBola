@@ -6,6 +6,7 @@ import model.Pelatih;
 import model.Pertandingan;
 import controller.ManajemenKlub;
 import view.TampilanView;
+import config.JPAUtil;
 
 public class Main {
 
@@ -72,20 +73,29 @@ public class Main {
                             String status = scanner.nextLine();
 
                             Pemain pemainBaru = new Pemain(namaPemain, posisi, nomor, usia, status);
-                            klub.tambahPemain(pemainBaru);
-                            menuView.tampilkanPesan("Pemain Berhasil Ditambahkan");
+                            if (klub.tambahPemain(pemainBaru)) {
+                                menuView.tampilkanPesan("Pemain Berhasil Ditambahkan");
+                            }
+                            else { 
+                                menuView.tampilkanPesan("Pemain Gagal ditambahkan.");
+                            }
                             break;
 
                         case 2:
                         klub.tampilkanSemuaPemain();
-                        menuView.tampilkanPesan("Tekan Enter untuk kembali ke menu.");
+                        menuView.tampilkanPesan("Tekan Enter untuk kembali ke menu");
                         scanner.nextLine();
                         break;
 
                         case 3:
-                            System.out.print("Masukkan Nama Pemain: ");
-                            String namaHapus = scanner.nextLine();
-                            boolean berhasilHapus = klub.hapusPemain(namaHapus);
+                            System.out.print("Masukkan ID Pemain: ");
+                            while (!scanner.hasNextInt()) {
+                                menuView.tampilkanPesan("ID harus berupa angka.");
+                                scanner.next();
+                                System.out.print("Masukkan ID Pemain: ");
+                            }
+                            int idHapus = scanner.nextInt();
+                            boolean berhasilHapus = klub.hapusPemain(idHapus);
                             if (berhasilHapus) {
                                 menuView.tampilkanPesan("Pemain Sudah Dihapus.");
                             }
@@ -95,16 +105,22 @@ public class Main {
                             break;
 
                         case 4:
-                            System.out.print("Masukkan Nama Pemain: ");
-                            String namaUpdate = scanner.nextLine();
+                            System.out.print("Masukkan ID Pemain: ");
+                            while (!scanner.hasNextInt()) {
+                                menuView.tampilkanPesan("ID harus berupa angka.");
+                                scanner.next();
+                                System.out.print("Masukkan ID Pemain: ");
+                            }
+                            int idUpdate = scanner.nextInt();
+                            scanner.nextLine();
                             System.out.print("Status Kesehatan Baru (Tersedia/Cedera): ");
                             String statusBaru = scanner.nextLine();
-                            boolean berhasilUpdate = klub.updateStatusPemain(namaUpdate, statusBaru);
+                            boolean berhasilUpdate = klub.updateStatusPemain(idUpdate, statusBaru);
                             if (berhasilUpdate) {
                                 menuView.tampilkanPesan("Update Status Pemain Berhasil");
                             } 
                             else {
-                                menuView.tampilkanPesan("Pemain dengan nama tersebut tidak ditemukan.");
+                                menuView.tampilkanPesan("Pemain dengan ID tersebut tidak ditemukan.");
                             }
                             break; 
 
@@ -151,13 +167,17 @@ public class Main {
                             scanner.nextLine();
 
                             Pelatih pelatihBaru = new Pelatih(namaPelatih, spesialisasi, pengalaman);
-                            klub.tambahPelatih(pelatihBaru);
-                            menuView.tampilkanPesan("Pelatih Berhasil Ditambahkan");
+                            if(klub.tambahPelatih(pelatihBaru)) {
+                                menuView.tampilkanPesan("Pelatih Berhasil Ditambahkan");
+                            }
+                            else {
+                                menuView.tampilkanPesan("Pelatih Gagal Ditambahkan.");
+                            }
                             break;
 
                         case 2:
                             klub.tampilkanSemuaPelatih();
-                            menuView.tampilkanPesan("Tekan Enter untuk kembali ke menu.");
+                            menuView.tampilkanPesan("Tekan Enter untuk kembali ke menu");
                             scanner.nextLine();
                             break;
                             
@@ -218,13 +238,17 @@ public class Main {
 
                             Pertandingan p = new Pertandingan(lawan, tanggal, kompetisi, skorKlub, skorLawan, lokasi);
 
-                            klub.tambahPertandingan(p);
-                            menuView.tampilkanPesan("Pertandingan Berhasil Ditambahkan ");
+                            if (klub.tambahPertandingan(p)) {
+                               menuView.tampilkanPesan("Pertandingan Berhasil Ditambahkan "); 
+                            }
+                            else {
+                                menuView.tampilkanPesan("Pertandingan Gagal Ditambahkan.");
+                            }
                             break;
-
+                            
                         case 2:
                             klub.tampilkanRiwayatPertandingan();
-                            menuView.tampilkanPesan("Tekan Enter untuk kembali ke menu.");
+                            menuView.tampilkanPesan("Tekan Enter untuk kembali ke menu");
                             scanner.nextLine();
                             break;
 
@@ -251,5 +275,6 @@ public class Main {
       while (pilihanUtama != 4);
 
       scanner.close();
+      JPAUtil.tutup();
     }
 }
