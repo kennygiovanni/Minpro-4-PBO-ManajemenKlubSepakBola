@@ -475,12 +475,12 @@ Berikut adalah dokumentasi visual antarmuka dan keluaran program saat dijalankan
 #### B. Tambah Pertandingan
 > Mengisi riwayat pertandingan baru meliputi tim lawan, tanggal, kompetisi, skor, dan lokasi pertandingan.
 
-![Tambah Pertandingan](Screenshots/11-tambah-pertandingan.png)
+![Tambah Pertandingan](https://github.com/kennygiovanni/Minpro-4-PBO-ManajemenKlubSepakBola/blob/master/screenshots/Screenshot%202026-10-14%20193059.png)
 
 #### C. Lihat Riwayat Pertandingan
 > Menampilkan riwayat seluruh pertandingan, lengkap dengan hasil (Menang/Kalah/Seri) yang dihitung otomatis dari skor.
 
-![Lihat Riwayat Pertandingan](Screenshots/12-lihat-pertandingan.png)
+![Lihat Riwayat Pertandingan](https://github.com/kennygiovanni/Minpro-4-PBO-ManajemenKlubSepakBola/blob/master/screenshots/Screenshot%202026-10-14%20193128.png)
 
 ---
 
