@@ -487,4 +487,4 @@ Berikut adalah dokumentasi visual antarmuka dan keluaran program saat dijalankan
 ### 6. Keluar dari Program
 > Penutupan program ketika pengguna memilih menu angka 4 pada menu utama.
 
-![Keluar Program](Screenshots/13-keluar.png)
+![Keluar Program](https://github.com/kennygiovanni/Minpro-4-PBO-ManajemenKlubSepakBola/blob/master/screenshots/Screenshot%202026-10-14%20193253.png)
