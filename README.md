@@ -429,22 +429,22 @@ Berikut adalah dokumentasi visual antarmuka dan keluaran program saat dijalankan
 #### B. Tambah Data Pemain (Input & Validasi)
 > Proses menginput data pemain baru yang disimpan ke database.
 
-![Tambah Pemain](Screenshots/03-tambah-pemain.png)
+![Tambah Pemain](https://github.com/kennygiovanni/Minpro-4-PBO-ManajemenKlubSepakBola/blob/master/screenshots/Screenshot%202026-10-14%20191832.png)
 
 #### C. Lihat Daftar Pemain
 > Output daftar seluruh pemain dari database beserta **ID**-nya, memanfaatkan method `getInfo()` lewat `tampilkanDaftar()`.
 
-![Lihat Daftar Pemain](Screenshots/04-lihat-pemain.png)
+![Lihat Daftar Pemain](https://github.com/kennygiovanni/Minpro-4-PBO-ManajemenKlubSepakBola/blob/master/screenshots/Screenshot%202026-10-14%20191912.png)
 
 #### D. Hapus Pemain
 > Proses penghapusan data pemain dari database berdasarkan **ID** yang diinputkan pengguna.
 
-![Hapus Pemain](Screenshots/05-hapus-pemain.png)
+![Hapus Pemain](https://github.com/kennygiovanni/Minpro-4-PBO-ManajemenKlubSepakBola/blob/master/screenshots/Screenshot%202026-10-14%20191946.png)
 
 #### E. Update Status Pemain
 > Pembaruan status kesehatan pemain (Tersedia/Cedera) berdasarkan **ID** pemain.
 
-![Update Status Pemain](Screenshots/06-update-status-pemain.png)
+![Update Status Pemain](https://github.com/kennygiovanni/Minpro-4-PBO-ManajemenKlubSepakBola/blob/master/screenshots/Screenshot%202026-10-14%20192456.png)
 
 ---
 
@@ -457,12 +457,12 @@ Berikut adalah dokumentasi visual antarmuka dan keluaran program saat dijalankan
 #### B. Tambah Pelatih
 > Menginput data pelatih baru beserta spesialisasi dan pengalaman melatih.
 
-![Tambah Pelatih](Screenshots/08-tambah-pelatih.png)
+![Tambah Pelatih](https://github.com/kennygiovanni/Minpro-4-PBO-ManajemenKlubSepakBola/blob/master/screenshots/Screenshot%202026-10-14%20192558.png)
 
 #### C. Lihat Daftar Pelatih
 > Menampilkan daftar pelatih yang tersimpan di database.
 
-![Lihat Daftar Pelatih](Screenshots/09-lihat-pelatih.png)
+![Lihat Daftar Pelatih](https://github.com/kennygiovanni/Minpro-4-PBO-ManajemenKlubSepakBola/blob/master/screenshots/Screenshot%202026-10-14%20192925.png)
 
 ---
 
