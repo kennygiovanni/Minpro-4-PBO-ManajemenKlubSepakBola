@@ -409,14 +409,14 @@ Berikut adalah dokumentasi visual antarmuka dan keluaran program saat dijalankan
 ### 1. Uji Koneksi Database
 > Hasil menjalankan `TesKoneksi` yang menampilkan "Koneksi Berhasil" ke database `klub_sepakbola`.
 
-![Uji Koneksi](Screenshots/00-tes-koneksi.png)
+![Uji Koneksi](https://github.com/kennygiovanni/Minpro-4-PBO-ManajemenKlubSepakBola/blob/master/screenshots/Screenshot%202026-10-14%20191257.png)
 
 ---
 
 ### 2. Tampilan Menu Utama
 > Menampilkan menu pilihan sistem manajemen klub saat pertama kali program dijalankan.
 
-![Tampilan Menu Utama](Screenshots/01-menu-utama.png)
+![Tampilan Menu Utama](https://github.com/kennygiovanni/Minpro-4-PBO-ManajemenKlubSepakBola/blob/master/screenshots/Screenshot%202026-10-08%20223822.png)
 
 ---
 
@@ -424,7 +424,7 @@ Berikut adalah dokumentasi visual antarmuka dan keluaran program saat dijalankan
 #### A. Menu Pemain
 > Submenu yang muncul setelah memilih angka 1, berisi pilihan tambah, lihat, hapus, update status, dan kembali.
 
-![Menu Pemain](Screenshots/02-menu-pemain.png)
+![Menu Pemain](https://github.com/kennygiovanni/Minpro-4-PBO-ManajemenKlubSepakBola/blob/master/screenshots/Screenshot%202026-10-08%20225603.png)
 
 #### B. Tambah Data Pemain (Input & Validasi)
 > Proses menginput data pemain baru yang disimpan ke database.
@@ -452,7 +452,7 @@ Berikut adalah dokumentasi visual antarmuka dan keluaran program saat dijalankan
 #### A. Menu Pelatih
 > Submenu yang muncul setelah memilih angka 2, berisi pilihan tambah pelatih, lihat daftar pelatih, dan kembali.
 
-![Menu Pelatih](Screenshots/07-menu-pelatih.png)
+![Menu Pelatih](https://github.com/kennygiovanni/Minpro-4-PBO-ManajemenKlubSepakBola/blob/master/screenshots/Screenshot%202026-10-08%20224854.png)
 
 #### B. Tambah Pelatih
 > Menginput data pelatih baru beserta spesialisasi dan pengalaman melatih.
@@ -470,7 +470,7 @@ Berikut adalah dokumentasi visual antarmuka dan keluaran program saat dijalankan
 #### A. Menu Pertandingan
 > Submenu yang muncul setelah memilih angka 3, berisi pilihan tambah pertandingan, lihat riwayat pertandingan, dan kembali.
 
-![Menu Pertandingan](Screenshots/10-menu-pertandingan.png)
+![Menu Pertandingan](https://github.com/kennygiovanni/Minpro-4-PBO-ManajemenKlubSepakBola/blob/master/screenshots/Screenshot%202026-10-08%20225008.png)
 
 #### B. Tambah Pertandingan
 > Mengisi riwayat pertandingan baru meliputi tim lawan, tanggal, kompetisi, skor, dan lokasi pertandingan.
